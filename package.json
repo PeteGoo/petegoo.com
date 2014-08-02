@@ -1,0 +1,25 @@
+{
+  "name": "www.petegoo.com",
+  "version": "1.0.0",
+  "description": "Peter Goodman's main website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeteGoo/petegoo.com.git"
+  },
+  "keywords": [
+    "petegoo"
+  ],
+  "author": "petegoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeteGoo/petegoo.com/issues"
+  },
+  "homepage": "https://github.com/PeteGoo/petegoo.com",
+  "devDependencies": {
+    "gulp": "^3.8.6"
+  }
+}

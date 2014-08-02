@@ -1,0 +1,64 @@
+// bootstrap less files located in another folder 
+@import "bootstrap/metro-bootstrap/metro-bootstrap.less";
+@import "bootstrap/responsive.less";
+
+
+@petegooHeadings: #2E8BCC;
+@petegooDefaultColor: #6c6c6c;
+
+body, p {
+	color: @petegooDefaultColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @petegooHeadings;
+    small {
+		color: @petegooHeadings;
+    }
+}
+
+.contact-networks-icons {
+	float:right;
+}
+
+.petegoo-header {
+   font-size: 84px;
+   margin-bottom: 40px;
+}
+
+.petegoo-hero {
+	font-size: 19px;
+	margin-left: 10px;
+	font-weight: 100;
+	font-family: @headingsFontFamily;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.link-list {
+	list-style-type: none;
+	margin-left: 5px;
+	li{
+		a {
+			text-decoration:none;
+			color: @petegooDefaultColor;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+
+		margin-bottom:10px;
+	}
+}
+
+.presentation-title {
+
+}
+
+.theme-credits {
+	float:right;
+}
+
+.footer {
+	font-size:10px;
+}

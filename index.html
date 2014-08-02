@@ -1,89 +1,131 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>petegoo</title>
+    <link href="css/petegoo.css" rel="stylesheet"/>
+<!--
+    <script src="/www/bundles/bootstrap?v=cPG7yGRJiF_1bU-g3a24Q6Q4i92FxnMKxBXoWFaCDLE1"></script>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="petegoo.com : Peter Goodman">
+    
+-->
+    <script src="scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    
+        
+        
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
 
-    <title>petegoo.com</title>
-  </head>
+        google.load("feeds", "1");
 
-  <body>
+        function initialize() {
+            var feed = new google.feeds.Feed("http://blog.petegoo.com/index.php/feed/");
+            feed.setNumEntries(8);
+            feed.set
+            var rssoutput = "<ul class=\"link-list\">";
+            feed.load(function (result) {
+                if (!result.error) {
+                    var container = document.getElementById("feed");
+                    for (var i = 0; i < result.feed.entries.length; i++) {
+                        //var entry = result.feed.entries[i];
+                        //var div = document.createElement("div");
+                        //div.appendChild(document.createTextNode(entry.title));
+                        //container.appendChild(div);
+                        rssoutput += "<li><a href='" + result.feed.entries[i].link + "'>" + result.feed.entries[i].title + "</a></li>";
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/PeteGoo/petegoo.com">View on GitHub</a>
 
-          <h1 id="project_title">petegoo.com</h1>
-          <h2 id="project_tagline">Peter Goodman</h2>
+                    }
+                    container.outerHTML = rssoutput;
+                    rssoutput += "</ul>";
+                }
+            });
+        }
+        google.setOnLoadCallback(initialize);
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/PeteGoo/petegoo.com/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/PeteGoo/petegoo.com/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+    </script>
+<div class="row-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                <div class="contact-networks-icons">
+                    <a href="http://blog.petegoo.com"><img src="images/rss.png"  title="My Blog"/></a>
+                    <a href="http://twitter.com/petegoo"><img src="images/twitter.png"  title="&#64petegoo on twitter"/></a>
+                    <a href="http://www.github.com/petegoo"><img src="images/github.png"  title="petegoo on github"/></a>
+                    <a href="http://nz.linkedin.com/pub/peter-goodman/19/aa4/350/"><img src="images/linkedIn.png" title="Peter Goodman on LinkedIn" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12">
+                <h1 class="petegoo-header">petegoo</h1>
+
+                <p class="petegoo-hero">I am a developer living in Auckland, New Zealand. I build software, blog, tweet and talk about it</p>
+            </div>
+
+        </div>
+        <div class="row mainContainer">
+            <div class="span4">
+                <h2><a href="http://www.github.com/petegoo">projects</a></h2>
+                <ul class="link-list">
+                    <li><a href="http://petegoo.github.com/Pushqa/">Pushqa - Pub/Sub OData style, queryable HTTP event streams</a></li>
+                    <li><a href="http://www.nuget.org/List/Packages/WorkflowServiceTrackingViewer">Workflow Service Tracking Viewer on NuGet</a></li>
+                </ul>
+                <h2><a href="http://www.slideshare.net/petegoo">presentations</a></h2>
+                <ul class="link-list">
+                    <li>
+                        <div class="presentation-title"><a href="http://www.slideshare.net/petegoo/introduction-to-rx">An introduction to Reactive Extensions</a></div>
+                    </li>
+                    <li>
+                        <div class="presentation-title"><a href="http://blog.petegoo.com/index.php/2011/09/28/slides-and-code-for-visual-studio-extensibility-dsl-and-t4/" target="_blank" title="Visual Studio Extensibility, DSLs and T4">
+                                                            Visual Studio Extensibility, DSLs and T4 (Auckland User Groups)</a></div></li>
+                    <li>
+                        <div class="presentation-title"><a href="http://blog.petegoo.com/index.php/2011/08/29/code-and-slides-for-teched-nz-2011dev-404-hardcore-workflow/" target="_blank" title="Hardcore Workflow at Teched NZ 2011">
+                                                            Hardcore Workflow (Tech-Ed NZ 2011)</a></div>
+                    </li>
+                    <li>
+                        <div class="presentation-title"><a href="http://www.slideshare.net/petegoo/practical-workflow-services" target="_blank" title="Slideshare slides">
+                                                            Practical Workflow Services (North Shore .Net User Group)</a></div>
+                    </li>
+                    <li>
+                        <div class="presentation-title"><a href="http://www.msteched.com/2010/NewZealand/DEV208" target="_blank" title="The video at the official Microsoft Tech-Ed site">
+                                                            Getting Started with Workflow in .NET 4 (Tech Ed-NZ 2010) </a></div>
+                    </li>
+                    <li>
+                        <div class="presentation-title"><a href="http://www.msteched.com/2010/NewZealand/DEV306" target="_blank" title="The video at the official Tech-Ed Microsoft site">
+                                                            Taming SOA Deployments using Windows Server AppFabric Tech-Ed NZ 2010
+                                                        </a></div>
+                    </li>
+
+                </ul>                
+            </div>
+            <div class="span4">
+                <h2><a href="http://blog.petegoo.com">blog</a></h2>
+                <div id="feed"></div>
+            </div>
+            <div class="span4">
+                <h2><a href="http://twitter.com/petegoo/">twitter</a></h2>
+                <p>
+                    <a class="twitter-timeline" href="https://twitter.com/petegoo" data-widget-id="280962235931697152">Tweets by petegoo</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+
+                </p>
+            </div>
+        </div>
+        <div class="row footer">
+            &copy; Peter Goodman 2012 All rights reserved
+            <div class="theme-credits">made with help from <a href="http://talkslab.github.com/metro-bootstrap">metro-bootstrap theme</a></div>
+        </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">petegoo.com maintained by <a href="https://github.com/PeteGoo">PeteGoo</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-50413255-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+</div>
 
 
-  </body>
+<!--
+    <script src="/www/bundles/jquery?v=JzhfglzUfmVF2qo-weTo-kvXJ9AJvIRBLmu11PgpbVY1"></script>
+-->
+    
+</body>
 </html>
