@@ -1,0 +1,30 @@
+[ 
+    {
+        "url": "https://speakerdeck.com/petegoo/building-mmbot",
+        "name": "Building mmbot, a C# port of GitHub's Hubot",
+    },
+    {
+        "url": "http://www.slideshare.net/petegoo/introduction-to-rx",
+        "name": "An introduction to Reactive Extensions",
+    },
+    {
+        "url": "http://blog.petegoo.com/index.php/2011/09/28/slides-and-code-for-visual-studio-extensibility-dsl-and-t4/",
+        "name": "Visual Studio Extensibility, DSLs and T4 (Auckland User Groups)",
+    },
+    {
+        "url": "http://blog.petegoo.com/index.php/2011/08/29/code-and-slides-for-teched-nz-2011dev-404-hardcore-workflow/",
+        "name": "Hardcore Workflow (Tech-Ed NZ 2011)",
+    },
+    {
+        "url": "http://www.slideshare.net/petegoo/practical-workflow-services",
+        "name": "Practical Workflow Services (North Shore .Net User Group)",
+    },
+    {
+        "url": "http://www.msteched.com/2010/NewZealand/DEV208",
+        "name": "Getting Started with Workflow in .NET 4 (Tech Ed-NZ 2010)",
+    },
+    {
+        "url": "http://www.msteched.com/2010/NewZealand/DEV306",
+        "name": "Taming SOA Deployments using Windows Server AppFabric Tech-Ed NZ 2010",
+    }
+]

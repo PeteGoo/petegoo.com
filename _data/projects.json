@@ -1,0 +1,22 @@
+[ 
+    {
+        "url": "http://blog.petegoo.com/2014/07/13/teamcity-slack-build-notifier/",
+        "name": "TeamCity Slack Build Notifier",
+        "description": "A plugin for TeamCity that pushes build notifications to Slack"
+    },
+    {
+        "url": "https://github.com/mmbot/",
+        "name": "mmbot",
+        "description": "A port of GitHub's Hubot to C# using scriptcs+Roslyn+Nuget"
+    },
+    {
+        "url": "http://petegoo.github.com/Pushqa/",
+        "name": "Pushqa",
+        "description": "Pub/Sub OData style, queryable HTTP event streams"
+    },
+    {
+        "url": "http://www.nuget.org/List/Packages/WorkflowServiceTrackingViewer",
+        "name": "Workflow Service Tracking Viewer",
+        "description": "Realtime tracking of WF workflow services"
+    }
+]

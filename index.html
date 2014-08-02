@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,36 +67,18 @@
         <div class="row mainContainer">
             <div class="span4">
                 <h2><a href="http://www.github.com/petegoo">projects</a></h2>
-                <ul class="link-list">
-                    <li><a href="http://petegoo.github.com/Pushqa/">Pushqa - Pub/Sub OData style, queryable HTTP event streams</a></li>
-                    <li><a href="http://www.nuget.org/List/Packages/WorkflowServiceTrackingViewer">Workflow Service Tracking Viewer on NuGet</a></li>
+                    <ul class="link-list">
+{% for project in site.data.projects %}
+                    <li><a href="{{project.url}}">{{project.name}} - {{project.description}}</a></li>
+{% endfor %}
                 </ul>
                 <h2><a href="http://www.slideshare.net/petegoo">presentations</a></h2>
                 <ul class="link-list">
+{% for presentation in site.data.presentations %}
                     <li>
-                        <div class="presentation-title"><a href="http://www.slideshare.net/petegoo/introduction-to-rx">An introduction to Reactive Extensions</a></div>
+                        <div class="presentation-title"><a href="{{presentation.url}}">{{presentation.name}}</a></div>
                     </li>
-                    <li>
-                        <div class="presentation-title"><a href="http://blog.petegoo.com/index.php/2011/09/28/slides-and-code-for-visual-studio-extensibility-dsl-and-t4/" target="_blank" title="Visual Studio Extensibility, DSLs and T4">
-                                                            Visual Studio Extensibility, DSLs and T4 (Auckland User Groups)</a></div></li>
-                    <li>
-                        <div class="presentation-title"><a href="http://blog.petegoo.com/index.php/2011/08/29/code-and-slides-for-teched-nz-2011dev-404-hardcore-workflow/" target="_blank" title="Hardcore Workflow at Teched NZ 2011">
-                                                            Hardcore Workflow (Tech-Ed NZ 2011)</a></div>
-                    </li>
-                    <li>
-                        <div class="presentation-title"><a href="http://www.slideshare.net/petegoo/practical-workflow-services" target="_blank" title="Slideshare slides">
-                                                            Practical Workflow Services (North Shore .Net User Group)</a></div>
-                    </li>
-                    <li>
-                        <div class="presentation-title"><a href="http://www.msteched.com/2010/NewZealand/DEV208" target="_blank" title="The video at the official Microsoft Tech-Ed site">
-                                                            Getting Started with Workflow in .NET 4 (Tech Ed-NZ 2010) </a></div>
-                    </li>
-                    <li>
-                        <div class="presentation-title"><a href="http://www.msteched.com/2010/NewZealand/DEV306" target="_blank" title="The video at the official Tech-Ed Microsoft site">
-                                                            Taming SOA Deployments using Windows Server AppFabric Tech-Ed NZ 2010
-                                                        </a></div>
-                    </li>
-
+{% endfor %}
                 </ul>                
             </div>
             <div class="span4">
