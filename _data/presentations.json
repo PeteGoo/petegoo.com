@@ -1,5 +1,17 @@
 [ 
     {
+        "url": "https://speakerdeck.com/petegoo/devops-learning-how-to-go-fast-without-tripping-over-the-cables",
+        "name": "DevOps - Learning how to go fast without tripping over the cables",
+    },
+    {
+        "url": "https://speakerdeck.com/petegoo/devops-2",
+        "name": "DevOps",
+    },
+    {
+        "url": "https://speakerdeck.com/petegoo/my-come-to-docker-moment",
+        "name": "My \"come to Docker\" moment",
+    },
+    {
         "url": "https://speakerdeck.com/petegoo/building-mmbot",
         "name": "Building mmbot, a C# port of GitHub's Hubot",
     },
