@@ -20,7 +20,7 @@
         google.load("feeds", "1");
 
         function initialize() {
-            var feed = new google.feeds.Feed("http://blog.petegoo.com/index.php/feed/");
+            var feed = new google.feeds.Feed("http://blog.petegoo.com/feed/");
             feed.setNumEntries(8);
             feed.set
             var rssoutput = "<ul class=\"link-list\">";
@@ -28,10 +28,6 @@
                 if (!result.error) {
                     var container = document.getElementById("feed");
                     for (var i = 0; i < result.feed.entries.length; i++) {
-                        //var entry = result.feed.entries[i];
-                        //var div = document.createElement("div");
-                        //div.appendChild(document.createTextNode(entry.title));
-                        //container.appendChild(div);
                         rssoutput += "<li><a href='" + result.feed.entries[i].link + "'>" + result.feed.entries[i].title + "</a></li>";
 
 
